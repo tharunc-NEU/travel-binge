@@ -2,6 +2,8 @@
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Home from "./Home";
 // import Destinations from "./components/Destinations";
+// import AboutUs from "./components/AboutUs";
+
 
 // const App = () => {
 //   return (
@@ -9,61 +11,20 @@
 //       <Routes>
 //         <Route path="/" element={<Home />} />
 //         <Route path="/destinations" element={<Destinations />} />
+//         <Route path="/about" element={<AboutUs />} />
 //       </Routes>
 //     </Router>
 //   );
 // };
 
 // export default App;
-
-
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from "./Home";
-// import Destinations from "./components/Destinations";
-// import DesignYourDestination from "./components/DesignYourDestination";
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/destinations" element={<Destinations />} />
-//         <Route path="/design-your-destination" element={<DesignYourDestination />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from "./Home";
-// import Destinations from "./components/Destinations";
-// import DesignYourDestination from "./components/DesignYourDestination";
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/destinations" element={<Destinations />} />
-//         <Route path="/design-your-destination" element={<DesignYourDestination />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Destinations from "./components/Destinations";
-import DesignYourDestination from "./components/DesignYourDestination";
-
+import AboutUs from "./components/AboutUs";
+import AuthPage from "./components/AuthPage";
 
 const App = () => {
   return (
@@ -71,7 +32,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />
-        <Route path="/design-your-destination" element={<DesignYourDestination />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/auth" element={<AuthPage />} />
       </Routes>
     </Router>
   );
