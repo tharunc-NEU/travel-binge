@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,24 +20,24 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="text-gray-400 text-sm space-y-2">
             <li>
-              <a href="#" className="hover:text-primary">
+              <Link to="/" className="hover:text-primary">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <Link to="/destinations" className="hover:text-primary">
                 Destinations
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <Link to="/special-offers" className="hover:text-primary">
                 Special Offers
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <Link to="/contact-us" className="hover:text-primary">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -79,7 +80,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="text-center border-t border-gray-700 pt-4 mt-8 text-gray-400 text-sm">
-        &copy; BingeTravel All Rights Reserved.
+        &copy; {new Date().getFullYear()} BingeTravel. All Rights Reserved.
       </div>
     </footer>
   );
