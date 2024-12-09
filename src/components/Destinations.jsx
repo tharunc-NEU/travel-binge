@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const destinations = [
   {
@@ -130,7 +131,6 @@ const destinations = [
   },
 ];
 
-
 // Hidden destinations
 const hiddenDestinations = [
   {
@@ -154,10 +154,7 @@ const hiddenDestinations = [
     type: "beach",
     coordinates: [22.8905, -109.9167],
   },
-  
-  
 ];
-
 
 const Destinations = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -247,181 +244,181 @@ const Destinations = () => {
       </section>
 
       {/* Design Your Destination Section */}
-<section className="py-16 px-8 bg-gray-50">
-  <h2 className="text-4xl font-semibold text-center mb-12">Design Your Destination</h2>
-  <form
-    onSubmit={handleGetRecommendations}
-    className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
-  >
-    {/* Destination Type */}
-    <div>
-      <label htmlFor="destination-type" className="block text-lg font-semibold mb-2">
-        Destination Type
-      </label>
-      <select
-        id="destination-type"
-        value={selectedType}
-        onChange={(e) => setSelectedType(e.target.value)}
-        className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-      >
-        <option value="all">All Types</option>
-        <option value="beach">Beach</option>
-        <option value="mountain">Mountain</option>
-        <option value="city">City</option>
-        <option value="cultural">Cultural</option>
-      </select>
-    </div>
-
-    {/* Travel Dates */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <label htmlFor="start-date" className="block text-lg font-semibold mb-2">
-          Start Date
-        </label>
-        <input
-          type="date"
-          id="start-date"
-          className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-      </div>
-      <div>
-        <label htmlFor="end-date" className="block text-lg font-semibold mb-2">
-          End Date
-        </label>
-        <input
-          type="date"
-          id="end-date"
-          className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-      </div>
-    </div>
-
-    {/* Budget */}
-    <div>
-      <label htmlFor="budget" className="block text-lg font-semibold mb-2">
-        Budget
-      </label>
-      <input
-        type="number"
-        id="budget"
-        placeholder="Enter your budget"
-        className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-      />
-    </div>
-
-    {/* Interests */}
-<div>
-  <label htmlFor="interests" className="block text-lg font-semibold mb-2">
-    Interests
-  </label>
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div>
-      <input
-        type="checkbox"
-        id="hiking"
-        value="hiking"
-        className="mr-2"
-      />
-      <label htmlFor="hiking" className="text-gray-700">
-        Relaxation
-      </label>
-    </div>
-    <div>
-      <input
-        type="checkbox"
-        id="nightlife"
-        value="nightlife"
-        className="mr-2"
-      />
-      <label htmlFor="nightlife" className="text-gray-700">
-        Nightlife
-      </label>
-    </div>
-    <div>
-      <input
-        type="checkbox"
-        id="history"
-        value="history"
-        className="mr-2"
-      />
-      <label htmlFor="history" className="text-gray-700">
-        History
-      </label>
-    </div>
-    <div>
-      <input
-        type="checkbox"
-        id="wildlife"
-        value="wildlife"
-        className="mr-2"
-      />
-      <label htmlFor="wildlife" className="text-gray-700">
-        Wildlife
-      </label>
-    </div>
-    <div>
-      <input
-        type="checkbox"
-        id="food"
-        value="food"
-        className="mr-2"
-      />
-      <label htmlFor="food" className="text-gray-700">
-        Food & Culinary
-      </label>
-    </div>
-    <div>
-      <input
-        type="checkbox"
-        id="adventure"
-        value="adventure"
-        className="mr-2"
-      />
-      <label htmlFor="adventure" className="text-gray-700">
-        Adventure Sports
-      </label>
-    </div>
-  </div>
-</div>
-
-
-    {/* Submit Button */}
-    <button
-      type="submit"
-      className="w-full bg-primary text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-primary-dark transition"
-    >
-      Get Recommendations
-    </button>
-  </form>
-</section>
-
-{/* Recommendations Section */}
-{filteredDestinations.length > 0 && (
-  <section className="py-16 px-8">
-    <h2 className="text-4xl font-semibold text-center mb-12">Recommended Destinations</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {filteredDestinations.map((destination, index) => (
-        <div
-          key={index}
-          className="bg-white shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105 duration-300"
+      <section className="py-16 px-8 bg-gray-50">
+        <h2 className="text-4xl font-semibold text-center mb-12">Design Your Destination</h2>
+        <form
+          onSubmit={handleGetRecommendations}
+          className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
         >
-          <img
-            src={destination.image}
-            alt={destination.name}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">{destination.name}</h3>
-            <p className="text-gray-600">{destination.tagline}</p>
+          {/* Destination Type */}
+          <div>
+            <label htmlFor="destination-type" className="block text-lg font-semibold mb-2">
+              Destination Type
+            </label>
+            <select
+              id="destination-type"
+              value={selectedType}
+              onChange={(e) => setSelectedType(e.target.value)}
+              className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <option value="all">All Types</option>
+              <option value="beach">Beach</option>
+              <option value="mountain">Mountain</option>
+              <option value="city">City</option>
+              <option value="cultural">Cultural</option>
+            </select>
           </div>
-        </div>
-      ))}
+
+          {/* Travel Dates */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="start-date" className="block text-lg font-semibold mb-2">
+                Start Date
+              </label>
+              <input
+                type="date"
+                id="start-date"
+                className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div>
+              <label htmlFor="end-date" className="block text-lg font-semibold mb-2">
+                End Date
+              </label>
+              <input
+                type="date"
+                id="end-date"
+                className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+          </div>
+
+          {/* Budget */}
+          <div>
+            <label htmlFor="budget" className="block text-lg font-semibold mb-2">
+              Budget
+            </label>
+            <input
+              type="number"
+              id="budget"
+              placeholder="Enter your budget"
+              className="w-full border px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+
+          {/* Interests */}
+          <div>
+            <label htmlFor="interests" className="block text-lg font-semibold mb-2">
+              Interests
+            </label>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div>
+                <input
+                  type="checkbox"
+                  id="hiking"
+                  value="hiking"
+                  className="mr-2"
+                />
+                <label htmlFor="hiking" className="text-gray-700">
+                  Relaxation
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="nightlife"
+                  value="nightlife"
+                  className="mr-2"
+                />
+                <label htmlFor="nightlife" className="text-gray-700">
+                  Nightlife
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="history"
+                  value="history"
+                  className="mr-2"
+                />
+                <label htmlFor="history" className="text-gray-700">
+                  History
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="wildlife"
+                  value="wildlife"
+                  className="mr-2"
+                />
+                <label htmlFor="wildlife" className="text-gray-700">
+                  Wildlife
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="food"
+                  value="food"
+                  className="mr-2"
+                />
+                <label htmlFor="food" className="text-gray-700">
+                  Food & Culinary
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="adventure"
+                  value="adventure"
+                  className="mr-2"
+                />
+                <label htmlFor="adventure" className="text-gray-700">
+                  Adventure Sports
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full bg-primary text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-primary-dark transition"
+          >
+            Get Recommendations
+          </button>
+        </form>
+      </section>
+
+      {/* Recommendations Section */}
+      {filteredDestinations.length > 0 && (
+        <section className="py-16 px-8">
+          <h2 className="text-4xl font-semibold text-center mb-12">Recommended Destinations</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredDestinations.map((destination, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105 duration-300"
+              >
+                <img
+                  src={destination.image}
+                  alt={destination.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-bold mb-2">{destination.name}</h3>
+                  <p className="text-gray-600">{destination.tagline}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Footer */}
+      <Footer />
     </div>
-  </section>
-)}
-
-
-   </div>
   );
 };
 
