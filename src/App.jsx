@@ -10,7 +10,7 @@ import Reservation from "./components/Reservation";
 import Maldives from "./components/Maldives";
 import Provence from "./components/Provence";
 import Venice from "./components/Venice";
-import FAQ from "./components/FAQ.jsx";
+import FAQ from "./components/FAQ";
 
 const App = () => {
   return (
